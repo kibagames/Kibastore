@@ -62,8 +62,6 @@ img.width * scale;
 const newHeight =
 img.height * scale;
 
-/* LEFT FOCUS */
-
 ctx.drawImage(
 img,
 0,
@@ -150,64 +148,3 @@ intro.style.display = "none";
 }
 
 }, 4500);
-
-/* SMOOTH CARD EFFECT */
-
-const cards =
-document.querySelectorAll(".card");
-
-cards.forEach(card => {
-
-card.addEventListener("mousemove", e => {
-
-const rect =
-card.getBoundingClientRect();
-
-const x =
-e.clientX - rect.left;
-
-const y =
-e.clientY - rect.top;
-
-card.style.transform =
-`
-perspective(1000px)
-rotateY(${(x - rect.width / 2) / 20}deg)
-rotateX(${-(y - rect.height / 2) / 20}deg)
-translateY(-5px)
-`;
-
-});
-
-card.addEventListener("mouseleave", () => {
-
-card.style.transform =
-"perspective(1000px) rotateY(0deg) rotateX(0deg)";
-
-});
-
-});
-
-/* FLOATING PARTICLES EFFECT */
-
-const particles =
-document.querySelector(".particles");
-
-let particleOffset = 0;
-
-function animateParticles(){
-
-particleOffset += 0.1;
-
-if(particles){
-
-particles.style.transform =
-`translateY(${Math.sin(particleOffset) * 8}px)`;
-
-}
-
-requestAnimationFrame(animateParticles);
-
-}
-
-animateParticles();
