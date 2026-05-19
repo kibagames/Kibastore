@@ -14,7 +14,7 @@ window.innerHeight;
 
 /* FRAME SETTINGS */
 
-const frameCount = 100;
+const frameCount = 107;
 
 const images = [];
 
