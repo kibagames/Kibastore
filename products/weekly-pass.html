@@ -1,51 +1,471 @@
-<!-- PRODUCT IMAGE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>KIBA OFFICIAL STORE</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#06070b;
+
+color:white;
+
+font-family:'Poppins',sans-serif;
+
+overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
+.background{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+z-index:-2;
+
+opacity:0.35;
+
+object-position:left center;
+}
+
+@media(min-width:900px){
+
+.background{
+object-position:center;
+}
+
+}
+
+.overlay{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.45);
+
+backdrop-filter:blur(4px);
+
+z-index:-1;
+}
+
+/* MAIN */
+
+.container{
+
+max-width:550px;
+
+margin:auto;
+
+padding:25px;
+}
+
+/* IMAGE */
+
+.product-image{
+
+width:100%;
+
+border-radius:30px;
+
+margin-top:30px;
+
+box-shadow:
+0 0 30px rgba(255,255,255,0.05);
+}
+
+/* TITLE */
+
+.title{
+
+text-align:center;
+
+font-size:38px;
+
+margin-top:25px;
+
+letter-spacing:5px;
+
+font-family:'Cinzel',serif;
+
+color:#f5f5f5;
+}
+
+/* GLASS */
+
+.glass-box{
+
+margin-top:28px;
+
+background:rgba(255,255,255,0.05);
+
+border:1px solid rgba(255,255,255,0.08);
+
+border-radius:28px;
+
+padding:24px;
+
+backdrop-filter:blur(10px);
+}
+
+.section-title{
+
+font-size:22px;
+
+margin-bottom:18px;
+}
+
+.description{
+
+color:#d8d8d8;
+
+line-height:1.9;
+
+font-size:15px;
+}
+
+.description ul{
+
+padding-left:20px;
+
+margin-top:15px;
+}
+
+.description li{
+
+margin-bottom:10px;
+}
+
+/* INPUT */
+
+.input{
+
+width:100%;
+
+padding:18px;
+
+margin-bottom:18px;
+
+border:none;
+
+border-radius:18px;
+
+background:rgba(255,255,255,0.06);
+
+color:white;
+
+outline:none;
+
+font-size:16px;
+}
+
+.input::placeholder{
+
+color:#bbbbbb;
+}
+
+/* BUTTONS */
+
+.check-btn,
+.pack-btn,
+.payment-btn,
+.buy-btn{
+
+border:none;
+
+cursor:pointer;
+
+transition:0.3s;
+}
+
+.check-btn{
+
+width:100%;
+
+padding:17px;
+
+border-radius:18px;
+
+background:
+linear-gradient(
+135deg,
+#c4b5fd,
+#8b5cf6
+);
+
+color:white;
+
+font-size:16px;
+
+margin-bottom:15px;
+}
+
+.username-box{
+
+background:rgba(255,255,255,0.05);
+
+border-radius:15px;
+
+padding:15px;
+
+color:#d8d8d8;
+}
+
+/* PACKS */
+
+.pack-grid,
+.payment-grid{
+
+display:grid;
+
+gap:15px;
+}
+
+.pack-btn{
+
+padding:16px;
+
+border-radius:16px;
+
+background:rgba(255,255,255,0.06);
+
+color:white;
+
+font-size:15px;
+}
+
+.payment-btn{
+
+padding:16px;
+
+border-radius:16px;
+
+background:rgba(255,255,255,0.06);
+
+color:white;
+
+font-size:15px;
+}
+
+/* BUY */
+
+.buy-btn{
+
+width:100%;
+
+padding:20px;
+
+margin-top:35px;
+
+border-radius:22px;
+
+background:
+linear-gradient(
+135deg,
+#ffe2b5,
+#d8b4fe
+);
+
+color:white;
+
+font-size:19px;
+
+font-weight:bold;
+
+letter-spacing:2px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
 
 <img
-  src="../assets/products/weekly-pass.png"
-  class="product-image"
+src="../assets/frames/ezgif-frame-001.png"
+class="background"
 >
+
+<div class="overlay"></div>
+
+<!-- MAIN -->
+
+<div class="container">
+
+<!-- IMAGE -->
+
+<img
+src="../assets/products/weekly-pass.png"
+class="product-image"
+>
+
+<!-- TITLE -->
+
+<div class="title">
+WEEKLY PASS
+</div>
 
 <!-- DESCRIPTION -->
 
 <div class="glass-box">
 
-  <h2 class="section-title">
-    WEEKLY PASS
-  </h2>
+<h2 class="section-title">
+Instruction
+</h2>
 
-  <div class="description">
+<div class="description">
 
-    <p>
-      You will receive 80 diamonds on the day of purchase,
-      and the extra 20 diamonds will be sent to the Vault,
-      which you must log in to redeem.
-    </p>
+<p>
+You will receive 80 diamonds on the day of purchase,
+and the extra 20 diamonds will be sent to the Vault.
+</p>
 
-    <br>
+<br>
 
-    <p>
-      In addition, you will be required to log in to the
-      weekly pass page for 6 consecutive days to redeem
-      a total of 120 extra diamonds, with 20 extra diamonds
-      per day.
-    </p>
+<p>
+Login daily for 6 more days to receive additional rewards.
+</p>
 
-    <br>
+<br>
 
-    <p>
-      During the 7 days, you will earn a total of:
-    </p>
+<p>
+Total rewards:
+</p>
 
-    <ul>
+<ul>
 
-      <li>220 Diamonds</li>
+<li>220 Diamonds</li>
 
-      <li>210 Starlight Scores</li>
+<li>210 Starlight Scores</li>
 
-      <li>7 Diamond Bundle Passes</li>
+<li>7 Diamond Bundle Passes</li>
 
-    </ul>
-
-  </div>
+</ul>
 
 </div>
+
+</div>
+
+<!-- IDS -->
+
+<div class="glass-box">
+
+<h2 class="section-title">
+ENTER IDS
+</h2>
+
+<input
+type="text"
+placeholder="USER ID"
+class="input"
+>
+
+<input
+type="text"
+placeholder="SERVER ID"
+class="input"
+>
+
+<button class="check-btn">
+Check Username
+</button>
+
+<div class="username-box">
+Username: —
+</div>
+
+</div>
+
+<!-- PACKS -->
+
+<div class="glass-box">
+
+<h2 class="section-title">
+Choose Packs
+</h2>
+
+<div class="pack-grid">
+
+<button class="pack-btn">
+Weekly Pass ×1
+</button>
+
+<button class="pack-btn">
+Weekly Pass ×2
+</button>
+
+<button class="pack-btn">
+Weekly Pass ×3
+</button>
+
+</div>
+
+</div>
+
+<!-- PAYMENT -->
+
+<div class="glass-box">
+
+<h2 class="section-title">
+Choose Payment Method
+</h2>
+
+<div class="payment-grid">
+
+<button class="payment-btn">
+UPI
+</button>
+
+<button class="payment-btn">
+Paytm
+</button>
+
+<button class="payment-btn">
+PhonePe
+</button>
+
+</div>
+
+</div>
+
+<!-- BUY -->
+
+<button class="buy-btn">
+BUY NOW
+</button>
+
+</div>
+
+</body>
+
+</html>
