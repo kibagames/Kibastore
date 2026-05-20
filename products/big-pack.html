@@ -4,10 +4,11 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>BIG PACK</title>
+<title>Big Pack</title>
 
 <link rel="stylesheet" href="../style.css">
 
@@ -15,10 +16,7 @@ content="width=device-width, initial-scale=1.0">
 
 <body>
 
-<img
-src="../assets/frames/ezgif-frame-001.png"
-class="background"
->
+<canvas id="bg"></canvas>
 
 <div class="overlay"></div>
 
@@ -29,9 +27,9 @@ src="../assets/products/big-pack.png"
 class="product-image"
 >
 
-<div class="title">
-MOBA LEGENDS BIG PACK
-</div>
+<h1 class="title">
+BIG PACK
+</h1>
 
 <div class="glass-box">
 
@@ -41,17 +39,23 @@ Instruction
 
 <div class="description">
 
-<p>
-Massive premium diamond package designed for players
-who want maximum rewards and exclusive content.
-</p>
-
 <ul>
 
-<li>Legend Skins</li>
-<li>Lucky Draw Events</li>
-<li>Collector Bundles</li>
-<li>Premium Shop Items</li>
+<li>
+Large amount of diamonds bundle.
+</li>
+
+<li>
+Manual admin assisted delivery.
+</li>
+
+<li>
+Fast and secure process.
+</li>
+
+<li>
+Please enter correct game IDs.
+</li>
 
 </ul>
 
@@ -78,11 +82,16 @@ class="input"
 >
 
 <button class="check-btn">
+
 Check Username
+
 </button>
 
 <div class="username-box">
-Username: —
+
+Username:
+Not Checked
+
 </div>
 
 </div>
@@ -96,15 +105,15 @@ Choose Packs
 <div class="pack-grid">
 
 <button class="pack-btn">
+500 Diamonds
+</button>
+
+<button class="pack-btn">
 1000 Diamonds
 </button>
 
 <button class="pack-btn">
 2000 Diamonds
-</button>
-
-<button class="pack-btn">
-5000 Diamonds
 </button>
 
 </div>
@@ -124,11 +133,11 @@ UPI
 </button>
 
 <button class="payment-btn">
-Paytm
+PhonePe
 </button>
 
 <button class="payment-btn">
-PhonePe
+Paytm
 </button>
 
 </div>
@@ -141,5 +150,8 @@ BUY NOW
 
 </div>
 
+<script src="../script.js"></script>
+
 </body>
+
 </html>
