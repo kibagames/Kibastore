@@ -96,34 +96,29 @@ drawFrame(0);
 
 };
 
-/* AUTO LOOP ANIMATION */
+/* SCROLL FRAME ANIMATION */
 
-let currentFrame = 0;
+window.addEventListener("scroll", () => {
 
-function animateFrames(){
+const scrollTop =
+window.scrollY;
 
-drawFrame(currentFrame);
+const maxScroll =
+document.body.scrollHeight -
+window.innerHeight;
 
-currentFrame++;
-
-if(currentFrame >= frameCount){
-
-currentFrame = 0;
-
-}
-
-requestAnimationFrame(() => {
-
-setTimeout(
-animateFrames,
-80
+const frameIndex =
+Math.min(
+frameCount - 1,
+Math.floor(
+(scrollTop / maxScroll)
+* frameCount
+)
 );
 
+drawFrame(frameIndex);
+
 });
-
-}
-
-animateFrames();
 
 /* RESIZE */
 
