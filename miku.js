@@ -14,7 +14,7 @@ new THREE.Scene();
 const camera =
 new THREE.PerspectiveCamera(
 
-35,
+45,
 
 window.innerWidth /
 window.innerHeight,
@@ -25,11 +25,7 @@ window.innerHeight,
 
 );
 
-camera.position.set(
-0,
-1.4,
-4
-);
+camera.position.z = 5;
 
 /* RENDERER */
 
@@ -42,10 +38,8 @@ antialias:true
 });
 
 renderer.setSize(
-
 window.innerWidth,
 window.innerHeight
-
 );
 
 renderer.setPixelRatio(
@@ -61,11 +55,17 @@ renderer.domElement.style.top =
 renderer.domElement.style.left =
 '0';
 
-renderer.domElement.style.zIndex =
-'10';
+renderer.domElement.style.width =
+'100%';
+
+renderer.domElement.style.height =
+'100%';
 
 renderer.domElement.style.pointerEvents =
 'none';
+
+renderer.domElement.style.zIndex =
+'5';
 
 document.body.appendChild(
 renderer.domElement
@@ -76,7 +76,7 @@ renderer.domElement
 const ambientLight =
 new THREE.AmbientLight(
 0xffffff,
-2
+5
 );
 
 scene.add(ambientLight);
@@ -84,11 +84,11 @@ scene.add(ambientLight);
 const directionalLight =
 new THREE.DirectionalLight(
 0xffffff,
-2
+4
 );
 
 directionalLight.position.set(
-2,
+0,
 3,
 5
 );
@@ -106,23 +106,23 @@ loader.load(
 
 'assets/models/miku.glb',
 
-(gltf)=>{
+function(gltf){
 
 miku = gltf.scene;
 
-/* SIZE */
+/* SCALE */
 
 miku.scale.set(
-1.7,
-1.7,
-1.7
+0.7,
+0.7,
+0.7
 );
 
 /* POSITION */
 
 miku.position.set(
-1.5,
--1.8,
+1.8,
+-1.5,
 0
 );
 
@@ -133,19 +133,26 @@ miku.rotation.y =
 
 scene.add(miku);
 
+console.log(
+'Miku Loaded'
+);
+
 },
 
 undefined,
 
-(error)=>{
+function(error){
 
-console.error(error);
+console.error(
+'MODEL ERROR:',
+error
+);
 
 }
 
 );
 
-/* ANIMATE */
+/* ANIMATION */
 
 function animate(){
 
@@ -158,7 +165,7 @@ if(miku){
 /* FLOAT */
 
 miku.position.y =
--1.8 +
+-1.5 +
 Math.sin(
 Date.now() * 0.0015
 ) * 0.08;
@@ -184,7 +191,7 @@ camera
 
 animate();
 
-/* MOBILE */
+/* RESIZE */
 
 window.addEventListener(
 'resize',
@@ -203,34 +210,3 @@ window.innerHeight
 
 }
 );
-
-/* BUTTON REACTION */
-
-const packButtons =
-document.querySelectorAll(
-'.pack-btn'
-);
-
-packButtons.forEach(button=>{
-
-button.addEventListener(
-'click',
-()=>{
-
-if(miku){
-
-miku.rotation.z =
-0.12;
-
-setTimeout(()=>{
-
-miku.rotation.z =
-0;
-
-},300);
-
-}
-
-});
-
-});
